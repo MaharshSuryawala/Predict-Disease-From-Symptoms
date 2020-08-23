@@ -1,1 +1,1 @@
-# Predict-Disease-From-Symptoms-
+# Predict-Disease-From-Symptoms
