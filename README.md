@@ -10,16 +10,20 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [Overview](#overview)
-  * [Built With](#built-with)
-  * [Dataset](#dataset)
-* [Results](#results)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-* [References](#references) 
-* [Acknowledgements](#acknowledgements)
+- [Predict-Disease-From-Symptoms](#predict-disease-from-symptoms)
+  - [Table of Contents](#table-of-contents)
+  - [About the Project](#about-the-project)
+    - [Overview](#overview)
+    - [Built With](#built-with)
+    - [Dataset](#dataset)
+  - [Results](#results)
+    - [Disease-Symptoms Network](#disease-symptoms-network)
+    - [Decision Tree](#decision-tree)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Contact](#contact)
+  - [References](#references)
+  - [Acknowledgements](#acknowledgements)
 
 ## About the Project
 
@@ -57,209 +61,6 @@ Source: [Disease-Symptom Knowledge Database](http://people.dbmi.columbia.edu/~fr
 ### Decision Tree
 
 * Model Accuracy - 90.54%
-
-* Text Representation 
-
-|--- atypia <= 0.50
-
-|   |--- pleuritic pain <= 0.50
-
-|   |   |--- low back pain <= 0.50
-
-|   |   |   |--- hypertonicity <= 0.50
-
-|   |   |   |   |--- hyperkalemia <= 0.50
-
-|   |   |   |   |   |--- dysarthria <= 0.50
-
-|   |   |   |   |   |   |--- abnormally hard consistency <= 0.50
-
-|   |   |   |   |   |   |   |--- feeling  suicidal <= 0.50
-
-|   |   |   |   |   |   |   |   |--- debilitation <= 0.50
-
-|   |   |   |   |   |   |   |   |   |--- hepatomegaly <= 0.50
-
-|   |   |   |   |   |   |   |   |   |   |--- enuresis <= 0.50
-
-|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 50
-
-|   |   |   |   |   |   |   |   |   |   |--- enuresis >  0.50
-
-|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
-
-|   |   |   |   |   |   |   |   |   |--- hepatomegaly >  0.50
-
-|   |   |   |   |   |   |   |   |   |   |--- swelling <= 0.50
-
-|   |   |   |   |   |   |   |   |   |   |   |--- class: primary  carcinoma of the liver cells
-
-|   |   |   |   |   |   |   |   |   |   |--- swelling >  0.50
-
-|   |   |   |   |   |   |   |   |   |   |   |--- class: lymphatic  diseases
-
-|   |   |   |   |   |   |   |   |--- debilitation >  0.50
-
-|   |   |   |   |   |   |   |   |   |--- aura <= 0.50
-
-|   |   |   |   |   |   |   |   |   |   |--- class: carcinoma of lung
-
-|   |   |   |   |   |   |   |   |   |--- aura >  0.50
-
-|   |   |   |   |   |   |   |   |   |   |--- class: encephalopathy
-
-|   |   |   |   |   |   |   |--- feeling  suicidal >  0.50
-
-|   |   |   |   |   |   |   |   |--- class: depression  mental
-
-|   |   |   |   |   |   |--- abnormally hard consistency >  0.50
-
-|   |   |   |   |   |   |   |--- class: cholecystitis
-
-|   |   |   |   |   |--- dysarthria >  0.50
-
-|   |   |   |   |   |   |--- enuresis <= 0.50
-
-|   |   |   |   |   |   |   |--- difficulty <= 0.50
-
-|   |   |   |   |   |   |   |   |--- paresis <= 0.50
-
-|   |   |   |   |   |   |   |   |   |--- numbness <= 0.50
-
-|   |   |   |   |   |   |   |   |   |   |--- stridor <= 0.50
-
-|   |   |   |   |   |   |   |   |   |   |   |--- class: benign  prostatic hypertrophy
-
-|   |   |   |   |   |   |   |   |   |   |--- stridor >  0.50
-
-|   |   |   |   |   |   |   |   |   |   |   |--- class: deglutition  disorder
-
-|   |   |   |   |   |   |   |   |   |--- numbness >  0.50
-
-|   |   |   |   |   |   |   |   |   |   |--- class: accident  cerebrovascular
-
-|   |   |   |   |   |   |   |   |--- paresis >  0.50
-
-|   |   |   |   |   |   |   |   |   |--- class: hemiparesis
-
-|   |   |   |   |   |   |   |--- difficulty >  0.50
-
-|   |   |   |   |   |   |   |   |--- class: transient  ischemic attack
-
-|   |   |   |   |   |   |--- enuresis >  0.50
-
-|   |   |   |   |   |   |   |--- class: confusion
-
-|   |   |   |   |--- hyperkalemia >  0.50
-
-|   |   |   |   |   |--- patient non compliance <= 0.50
-
-|   |   |   |   |   |   |--- hypotension <= 0.50
-
-|   |   |   |   |   |   |   |--- rhonchus <= 0.50
-
-|   |   |   |   |   |   |   |   |--- pain chest <= 0.50
-
-|   |   |   |   |   |   |   |   |   |--- rest pain <= 0.50
-
-|   |   |   |   |   |   |   |   |   |   |--- class: respiratory  failure
-
-|   |   |   |   |   |   |   |   |   |--- rest pain >  0.50
-
-|   |   |   |   |   |   |   |   |   |   |--- class: peripheral  vascular disease
-
-|   |   |   |   |   |   |   |   |--- pain chest >  0.50
-
-|   |   |   |   |   |   |   |   |   |--- class: kidney  disease
-
-|   |   |   |   |   |   |   |--- rhonchus >  0.50
-
-|   |   |   |   |   |   |   |   |--- class: Alzheimer's  disease
-
-|   |   |   |   |   |   |--- hypotension >  0.50
-
-|   |   |   |   |   |   |   |--- hypokalemia <= 0.50
-
-|   |   |   |   |   |   |   |   |--- orthopnea <= 0.50
-
-|   |   |   |   |   |   |   |   |   |--- class: kidney  failure acute
-
-|   |   |   |   |   |   |   |   |--- orthopnea >  0.50
-
-|   |   |   |   |   |   |   |   |   |--- class: insufficiency  renal
-
-|   |   |   |   |   |   |   |--- hypokalemia >  0.50
-
-|   |   |   |   |   |   |   |   |--- class: overload  fluid
-
-|   |   |   |   |   |--- patient non compliance >  0.50
-
-|   |   |   |   |   |   |--- class: edema  pulmonary
-
-|   |   |   |--- hypertonicity >  0.50
-
-|   |   |   |   |--- class: thrombus
-
-|   |   |--- low back pain >  0.50
-
-|   |   |   |--- class: aphasia
-
-|   |--- pleuritic pain >  0.50
-
-|   |   |--- diarrhea <= 0.50
-
-|   |   |   |--- cicatrisation <= 0.50
-
-|   |   |   |   |--- metastatic lesion <= 0.50
-
-|   |   |   |   |   |--- egophony <= 0.50
-
-|   |   |   |   |   |   |--- class: influenza
-
-|   |   |   |   |   |--- egophony >  0.50
-
-|   |   |   |   |   |   |--- class: upper  respiratory infection
-
-|   |   |   |   |--- metastatic lesion >  0.50
-
-|   |   |   |   |   |--- class: endocarditis
-
-|   |   |   |--- cicatrisation >  0.50
-
-|   |   |   |   |--- class: embolism  pulmonary
-
-|   |   |--- diarrhea >  0.50
-
-|   |   |   |--- jugular venous distention <= 0.50
-
-|   |   |   |   |--- hemodynamically stable <= 0.50
-
-|   |   |   |   |   |--- productive cough <= 0.50
-
-|   |   |   |   |   |   |--- class: bacteremia
-
-|   |   |   |   |   |--- productive cough >  0.50
-
-|   |   |   |   |   |   |--- class: HIV
-
-|   |   |   |   |--- hemodynamically stable >  0.50
-
-|   |   |   |   |   |--- class: carcinoma prostate
-
-|   |   |   |--- jugular venous distention >  0.50
-
-|   |   |   |   |--- class: chronic  kidney failure
-
-|--- atypia >  0.50
-
-|   |--- lung nodule <= 0.50
-
-|   |   |--- class: arthritis
-
-|   |--- lung nodule >  0.50
-
-|   |   |--- class: neoplasm  metastasis
-
 
 * Decision Tree
 
